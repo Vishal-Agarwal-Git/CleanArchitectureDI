@@ -11,7 +11,7 @@ namespace CleanArchitecture.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection ImplementPersistence(
+        public static IServiceCollection ImplementPersistence(this 
             IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<MovieRentalDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
